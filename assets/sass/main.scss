@@ -12,8 +12,10 @@
 @import "vendor/normalize";
 
 // Modules and Variables
-@import "partials/base";
+@import "partials/variables";
+@import "modules/mixin";
 
 // Partials
 @import "partials/typography";
 @import "partials/layout";
+@import "partials/queris";

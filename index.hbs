@@ -1,39 +1,50 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! The big featured header on the homepage, with the site logo and description }}
-<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-        <div id="site-head-content" class="inner">
+<main class="main_sson module content" role="main">
+  {{#foreach posts}}
+    <article id="blog" class="article_sson" role="article" itemscope itemtype="http://schema.org/Article">
+      <header class="postheader_sson">
+        <h1 class="posttitle_sson" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
+      </header>
 
-            {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}</h1>
-            <h2 class="blog-description">{{@blog.description}}</h2>
-        </div>
-    </div>
-</header>
+      <div class="postcontent_sson" itemprop="articleBody">
+        {{excerpt words="40"}}...
+      </div>
 
-{{! The main content area on the homepage }}
-<main class="content" role="main">
+      <footer class="postfooter_sson">
+        <time class="date_sson" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+          {{date format='dddd DD MMM YYYY'}}
+        </time>
 
-    {{! Each post will be output using this markup }}
-    {{#foreach posts}}
+        {{#if tags}}
+          <div class="posttags_sson">
+            # {{tags separator=" | "}}
+          </div>
+        {{/if}}
 
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        {{#if author}}
+          {{#if author.name}}
+            <div class="author_sson">
+              <span itemprop="author_sson">
+                By <a href="{{url}}">{{author.name}}</a>
+              </span>
+            </div>
+          {{/if}}
+        {{/if}}
 
-        </header>
-        <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
-        </section>
+      </footer>
+
+      <h5 class="index-headline">
+       <span>×</span>
+      </h5>
     </article>
+  {{/foreach}}
 
-    {{/foreach}}
-
-    {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}}
-
+  {{#if pagination}}
+    <div class="pagination_sson">
+      {{{pagination}}}
+    </div>
+  {{/if}}
 </main>
+{{> footer}}

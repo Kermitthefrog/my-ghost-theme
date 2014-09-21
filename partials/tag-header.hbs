@@ -1,0 +1,27 @@
+<div role='banner' class="post-header_sson">
+	{{#if @blog.logo}}
+		<a class="logo_sson" href="{{@blog.url}}">
+			<img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+		</a>
+	{{/if}}
+
+
+      <h1 class="post-title">#{{tag.name}}</h1>
+      	<h2 class="page-description">A {{pagination.total}}-post collection</h2>
+		<span class="post-header-meta">
+      <time class="date_sson" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+        {{date format='dddd DD MMM YYYY'}}
+      </time>
+
+      {{#if tags}}
+        {{tags separator=" | "}}
+      {{/if}}
+		</span>
+
+	<center>
+		<a href="#post-content" class="post-topofpage">
+			<i class="fa fa-angle-down"></i>
+		</a>
+	</center>
+
+</div>

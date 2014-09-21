@@ -1,0 +1,26 @@
+//** Typography vars //**
+
+$default_font: 'Open Sans', Arial, Helvetica, sans-serif;
+$header_font: 'Open Sans', Arial, Helvetica, sans-serif; //"Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+
+//** Layout vars //**
+
+// Golden ratio, which makes just about anything look lovely
+$golden: 1.618;
+$add_padding: 5 * $golden;
+$posttitle_overflow: 9;
+$readable_width: 34em;
+
+
+
+
+//** Color vars //**
+$color_01: #A8A8A8; //soft grey
+$color_02: #6E6E6E; //hard grey
+$color_03: #000000; //darkest black
+$color_04: #F3F3F3; //light grey
+$color_05: #E9E9E9; //lighest grey
+$color_06: #FFFFFF; //white
+$color_07: #e5a825; //soft oragne
+

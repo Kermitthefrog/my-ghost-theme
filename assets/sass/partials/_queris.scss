@@ -1,0 +1,41 @@
+@media (max-width: 960px) {
+	.article_sson, .post {
+		background: white;
+		padding: $add_padding / 4 + 0em $add_padding / 5 + 0em $add_padding / 4 + 0em $add_padding / 5 + 0em;
+		margin-bottom: 0.25em;
+	}
+}
+
+
+@media (max-width: 400px) {
+	.header_sson,
+	.post-header_sson {
+		padding-top: 5 * $golden + 0em;
+    padding-right: 0.5 * $golden + 0em;
+    padding-bottom: 4 * $golden + 0em;
+    padding-left: 0.5 * $golden + 0em;
+	}
+
+	.fixed-menu ul li a {
+		font-size: 13px;
+	}
+
+	.share .left {
+		width: 100%;
+		text-align: center;
+	}
+
+	.share .right {
+		display: none;
+	}
+}
+
+@media (max-width: 320px) {
+	h1 {
+		font-size: 1.6em;
+	}
+
+	.header_sson {
+		padding-top: $golden + 0em;
+	}
+}

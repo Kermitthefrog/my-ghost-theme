@@ -1,0 +1,79 @@
+//** Mixins //**
+
+@mixin HeaderFont() {
+  font-family: $header_font;
+  line-height: 1.313em;
+  font-weight: 400;
+}
+
+@mixin HeaderBackground () {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  box-sizing: border-box !important;
+  background-attachment: fixed !important;
+}
+
+@mixin HeaderColor () {
+    background-color: transparent;
+}
+
+@mixin LinkColor () {
+    color: $color_03;
+}
+
+@mixin LinkHoverColor () {
+    color: $color_02;
+}
+
+
+@mixin ArticleColor () {
+    background: white;
+    a, a:link, a:visited {
+        color: $color_03;
+    }
+    a:hover, a:focus {
+        color: $color_02;
+    }
+}
+
+@mixin PostTitleColor () {
+
+        a, a:link, a:visited {
+            color: $color_03;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            color: $color_01;
+        }
+}
+
+@mixin PaginationColor () {
+    background-color: white;
+    color: $color_05;
+    border-bottom: 0.063rem solid darken($color_01, 10%);
+}
+
+@mixin BlockquoteColor () {
+    background-color: $color_04;
+    color: $color_03;
+    border: 0.063rem solid darken($color_05, 10%);
+    border-left: 8px #e5a825 solid;
+}
+
+@mixin FixedMenu () {
+  background-color: rgba(252,252,252,.9);
+  border-bottom: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}

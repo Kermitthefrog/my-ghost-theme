@@ -1,0 +1,30 @@
+{{> fixed-menu}}
+<div role='banner' class="header_sson">
+	{{#if @blog.logo}}
+		<a class="logo_sson" href="{{@blog.url}}">
+			<!--<img src="{{@blog.logo}}" alt="{{@blog.title}}" />-->
+		</a>
+	{{/if}}
+
+	{{#if @blog.cover}}
+			<img src="{{@blog.cover}}" alt="{{@blog.title}}" />
+	{{/if}}
+
+	<h1 class="blogtitle_sson">
+		<a title="{{@blog.title}}" href="{{@blog.url}}">
+			{{{@blog.title}}}
+		</a>
+	</h1>
+
+	<p class="blogdescription_sson">
+		<a title="{{@blog.title}}" href="/about">
+			{{@blog.description}}
+		</a>
+	</p>
+	{{> menu}}
+</div>
+<center>
+	<a href="#blog" class="topofpage">
+		<i class="fa fa-angle-down"></i>
+	</a>
+</center>

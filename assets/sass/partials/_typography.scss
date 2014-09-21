@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: $default_font;
+    line-height: $golden + 0em; //set the regular line height to the golden ratio
+    font-weight: 300;
+    word-wrap:break-word;
+    overflow-x: hidden;
+}
+
+a {
+    background: transparent;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+a:link, a:visited {
+  @include LinkColor();
+}
+
+a:active,
+a:hover {
+    @include LinkHoverColor();
+    outline: 0;
+}
+
+// Classic typographic scale: if default 16px total size scale would be:
+// 9px, 10px, 11px, 12px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px
+
+h1 {
+  @include HeaderFont();
+  font-size: 3em;
+  margin: 0.563em 0;
+}
+
+h2 {
+  @include HeaderFont();
+  font-size: 2.25em;
+  margin: 0.625em 0;
+}
+
+h3 {
+  @include HeaderFont();
+  font-size: 1.5em;
+  margin: 1.313em 0;
+}
+
+h4 {
+  @include HeaderFont();
+  font-size: 1.313em;
+  margin: 1.313em 0;
+}
+
+h5 {
+  @include HeaderFont();
+  font-size: 1.125em;
+  margin: 1.313em 0;
+}
+
+h6 {
+  @include HeaderFont();
+  font-size: 1em;
+  margin: 0.75em 0;
+}
+
+.article .post-content blockquote,
+.article .post-footer blockquote,
+.page .post-content blockquote,
+.page .post-footer blockquote {
+  font-style: italic;
+  font-size: 1.33rem;
+  line-height: 1.4;
+  padding: 0 0 0 0.7689rem;
+  border-left: 8px #e5a825 solid;
+  margin: 0 0 1.7689rem;
+
+  p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
+}
+
+.cando {
+  font-weight: 700;
+}
+
+h1.blogtitle_sson, h1.blogtitle_sson a {
+    font-family: $default_font;
+    font-size: 3.2rem;
+    font-weight: 300;
+    margin: 0;
+    text-decoration: none;
+}
+
+p.blogdescription_sson, p.blogdescription_sson a {
+    font-size: 1.313rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+h1.posttitle_sson {
+  @include PostTitleColor();
+  font-weight: 700;
+  position: relative;
+  margin-left: -$posttitle_overflow + 0rem;
+  margin-right: -$posttitle_overflow + 0rem;
+  padding: $golden / 2 + 0rem $posttitle_overflow + 0rem;
+}
+
+.post {
+
+  .post-title {
+    text-align: center;
+  }
+}
+
+.post-header_sson {
+  font-family: $default_font;
+  font-weight: 400;
+  color: $color_06;
+
+  .post-title {
+    font-family: $default_font;
+    margin: 0;
+  }
+
+  .post-author_sson {
+    color: $color_01;
+  }
+
+
+  a {
+    color: $color_07;
+
+    &:hover {
+      color: $color_02;
+    }
+  }
+}
+
+.tag-read-more {
+  border: 1px solid $color_01;
+}
+
+.topofpage {
+  font-size: 2.25em;
+}
+
+.post-topofpage {
+  font-size: 2.25em;
+  color: $color_06 !important;
+}
