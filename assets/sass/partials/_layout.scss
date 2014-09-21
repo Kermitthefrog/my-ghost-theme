@@ -73,7 +73,7 @@ img {
 #post-header {
   background: url(../img/apple.jpg);
   @include HeaderBackground ();
-  min-height: 500px;
+  height: 500px;
 }
 
 .post-header_sson {
