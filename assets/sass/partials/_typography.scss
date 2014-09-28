@@ -11,10 +11,10 @@ a {
     background: transparent;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--ms-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 a:link, a:visited {
@@ -66,6 +66,29 @@ h6 {
   margin: 0.75em 0;
 }
 
+.menu li {
+  letter-spacing: .15em;
+
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color_09;
+    }
+  }
+}
+
+blockquote.qoute-mobile {
+  color: $color_08;
+  font-family: $default_font;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
 .article .post-content blockquote,
 .article .post-footer blockquote,
 .page .post-content blockquote,
@@ -74,12 +97,16 @@ h6 {
   font-size: 1.33rem;
   line-height: 1.4;
   padding: 0 0 0 0.7689rem;
-  border-left: 8px #e5a825 solid;
+  border-left: 8px $color_09 solid;
   margin: 0 0 1.7689rem;
 
   p,h1,h2,h3,h4,h5,h6 {
     margin: 0;
   }
+}
+
+.post-content h2,h3,h4,h5,h6 {
+  font-weight: 700;
 }
 
 .cando {
@@ -127,15 +154,15 @@ h1.posttitle_sson {
   }
 
   .post-author_sson {
-    color: $color_01;
+    color: $color_06;
   }
 
 
   a {
-    color: $color_07;
+    color: $color_09;
 
     &:hover {
-      color: $color_02;
+      color: $color_08;
     }
   }
 }
@@ -148,7 +175,13 @@ h1.posttitle_sson {
   font-size: 2.25em;
 }
 
-.post-topofpage {
-  font-size: 2.25em;
+.post-topofpage  {
   color: $color_06 !important;
+  i {
+   font-size: 2.25em;
+
+    &:hover {
+      color: $color_09;
+    }
+  }
 }

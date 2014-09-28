@@ -1,4 +1,4 @@
-/*! johanjohnasson - v0.1.0 - 2014-09-21
+/*! johanjohnasson - v0.1.0 - 2014-09-28
 * www.johanjohansson.me 
 * Copyright (c) 2014 Johan Johansson; Licensed under the MIT License */
 $(document).ready(function() {
@@ -32,26 +32,47 @@ $(document).ready(function() {
   });
 });
 
-
-
-
 // If scroll is bigger then 200 do menu fixed & add class avtive
   $(function() {
     var header = $(".fixed-menu");
+    var nav = $("#primary-navigation");
     $(".fixed-menu").addClass("is-hidden");
 
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
-      if (scroll <= 700) {
-        header.addClass("is-hidden");
+      if (scroll <= 730) {
+       // header.addClass("is-hidden");
+        nav.removeClass("fixed");
       } else {
-          header.removeClass("is-hidden");
+         // header.removeClass("is-hidden");
+          nav.addClass("fixed");
       }
     });
   });
 
+// mobile
+  var $links = $('.menu');
+  var citat = $('.qoute-mobile');
 
+  $('#toggle-menu').on('click',function(e){
+    e.preventDefault();
+
+    $(this).toggleClass('x');
+    $links.toggleClass('show');
+
+    citat.toggleClass('hidden');
+  });
+
+  preload();
+
+  $('.rollover').on('mouseenter',function(){
+    switchSrc($(this));
+  })
+
+  $('.rollover').on('mouseleave',function(){
+    switchSrc($(this));
+  })
 
 
 });

@@ -19,32 +19,32 @@
 }
 
 @mixin LinkColor () {
-    color: $color_03;
+    color: $color_08;
 }
 
 @mixin LinkHoverColor () {
-    color: $color_02;
+    color: $color_09;
 }
 
 
 @mixin ArticleColor () {
     background: white;
     a, a:link, a:visited {
-        color: $color_03;
+        color: $color_08;
     }
     a:hover, a:focus {
-        color: $color_02;
+        color: $color_09;
     }
 }
 
 @mixin PostTitleColor () {
 
         a, a:link, a:visited {
-            color: $color_03;
+            color: $color_08;
             text-decoration: none;
         }
         a:hover, a:focus {
-            color: $color_01;
+            color: $color_09;
         }
 }
 

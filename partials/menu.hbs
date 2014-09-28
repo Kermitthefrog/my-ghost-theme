@@ -1,7 +1,25 @@
-<nav id="menu">
-	<ul>
-		<li><a href="/about">Mig</a></li>
-		<li><a href="/#blog">Tankar</a></li>
-		<li><a href="mailto:johanssonjohan@outlook.com">Hallå</a></li>
-	</ul>
+<nav id="primary-navigation" class="primary-navigation">
+	<div class="container">
+		{{#if @blog.logo}}
+			<a class="logo_sson" href="{{@blog.url}}">
+				<img width="40px" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+			</a>
+		{{/if}}
+		<a href="#" id="toggle-menu" class="hawaii">
+      <span class="bar bar-top"></span>
+      <span class="bar bar-middle"></span>
+      <span class="bar bar-bottom"></span>
+    </a>
+
+		<blockquote class="qoute-mobile hidden">
+			De människor som är galna nog att tro att de kan förändra världen
+			är de som också gör det.
+		</blockquote>
+
+			<ul class="menu">
+				<li><a href="/about">Mig</a></li>
+				<li><a href="/#blog">Tankar</a></li>
+				<li><a href="mailto:johanssonjohan@outlook.com">Hallå</a></li>
+			</ul>
+	</div>
 </nav>
