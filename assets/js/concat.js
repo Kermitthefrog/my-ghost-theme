@@ -1,4 +1,4 @@
-/*! johanjohnasson - v0.1.0 - 2014-09-28
+/*! johanjohnasson - v0.1.0 - 2014-10-05
 * www.johanjohansson.me 
 * Copyright (c) 2014 Johan Johansson; Licensed under the MIT License */
 $(document).ready(function() {
@@ -8,6 +8,24 @@ $(document).ready(function() {
  			'background': 'url(assets/img/'
  				+ images[Math.floor(Math.random() * images.length)] + ')'
  	});
+
+  // Qoutes on FrontPage
+  function showQuotes() {
+    var quotes = [];
+
+    quotes[0] = "Snuff & Coffee is Swedish love";
+    quotes[1] = "Love = Oxygen";
+    quotes[2] = "Beauty = price";
+    quotes[3] = "Keep a business diary";
+
+    var quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    $('.quote').text(quote).fadeToggle(2000);
+
+    setTimeout(showQuotes, 2000);
+}
+
+showQuotes();
 
     // Load Background Images
   var images = ['1.jpg', 'tog.jpg', 'apple.jpg', 'hav.jpg'];
@@ -35,7 +53,8 @@ $(document).ready(function() {
 // If scroll is bigger then 200 do menu fixed & add class avtive
   $(function() {
     var header = $(".fixed-menu");
-    var nav = $("#primary-navigation");
+    var largenav = $(".primary-navigation");
+    var nav = $(".header-bar");
     $(".fixed-menu").addClass("is-hidden");
 
     $(window).scroll(function() {
@@ -43,16 +62,18 @@ $(document).ready(function() {
 
       if (scroll <= 730) {
        // header.addClass("is-hidden");
-        nav.removeClass("fixed");
+        //nav.removeClass("fixed");
+        //largenav.removeClass("fixed");
       } else {
          // header.removeClass("is-hidden");
-          nav.addClass("fixed");
+          //nav.addClass("fixed");
+          //largenav.addClass("fixed");
       }
     });
   });
 
 // mobile
-  var $links = $('.menu');
+  var $links = $('.overlay');
   var citat = $('.qoute-mobile');
 
   $('#toggle-menu').on('click',function(e){

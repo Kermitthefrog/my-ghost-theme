@@ -131,9 +131,7 @@ h1.posttitle_sson {
   @include PostTitleColor();
   font-weight: 700;
   position: relative;
-  margin-left: -$posttitle_overflow + 0rem;
-  margin-right: -$posttitle_overflow + 0rem;
-  padding: $golden / 2 + 0rem $posttitle_overflow + 0rem;
+  padding: $golden / 2 + 0rem 0;
 }
 
 .post {

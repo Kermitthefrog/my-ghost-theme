@@ -52,16 +52,17 @@ img {
     text-align: center;
     padding-top: 10 * $golden + 0em;
     padding-right: 0.5 * $golden + 0em;
-    padding-bottom: 15 * $golden + 0em;
+    padding-bottom: 13 * $golden + 0em;
     padding-left: 0.5 * $golden + 0em;
     margin-bottom: 0.25em;
 }
 
 .primary-navigation {
-  position: absolute;
   width: 100%;
+  position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 100;
 
   img {
     display: none;
@@ -103,6 +104,12 @@ img {
   }
 }
 
+.quotes {
+  float: left;
+  padding: 0 20px;
+}
+
+// Steve
 .qoute-mobile {
   z-index: 1000;
   position: absolute;
