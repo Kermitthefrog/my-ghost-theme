@@ -5,26 +5,17 @@ img {
 
 #header {
   @include HeaderBackground ();
-
-  /* Height and width fallback for older browsers. */
+  background: url(../img/iam.png);
   height: 100%;
   width: 100%;
-
-  /* Set the height to match that of the viewport. */
-  height: 100vh;
-
-  /* Set the width to match that of the viewport. */
-  width: 100vw;
-
-  /* Remove any browser-default margins. */
   margin: 0;
 }
 
-.cover-white {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.81);
-}
+//.cover-white {
+ // width: 100%;
+ // height: 100%;
+ // background: rgba(255, 255, 255, 0.81);
+//}
 
 .cover-black {
   width: 100%;
@@ -48,20 +39,30 @@ img {
 }
 
 .header_sson {
-    @include HeaderColor();
-    text-align: center;
-    padding-top: 10 * $golden + 0em;
-    padding-right: 0.5 * $golden + 0em;
-    padding-bottom: 13 * $golden + 0em;
-    padding-left: 0.5 * $golden + 0em;
-    margin-bottom: 0.25em;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  @include HeaderColor();
+  text-align: center;
+  display: table;
+   // padding-top: 10 * $golden + 0em;
+   // padding-right: 0.5 * $golden + 0em;
+   // padding-bottom: 13 * $golden + 0em;
+   // padding-left: 0.5 * $golden + 0em;
+   // margin-bottom: 0.25em;
+
+   .header_inner {
+    display: table-cell;
+    vertical-align: middle;
+   }
 }
 
 .primary-navigation {
   width: 100%;
-  position: absolute;
+  background-color: rgba(255, 255, 255, 0.64);
+  position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   z-index: 100;
 
   img {
@@ -85,7 +86,7 @@ img {
   background: rgba(255,255,255,.95);
   bottom: auto;
   left: 0;
-  position: fixed !important;
+  position: fixed;
   top: 0;
   padding: 5px 0;
   z-index: 50;
@@ -107,23 +108,20 @@ img {
 .quotes {
   float: left;
   padding: 0 20px;
-}
 
-// Steve
-.qoute-mobile {
-  z-index: 1000;
-  position: absolute;
-  top: 5%;
+  p {
+    margin: 15px 0;
+  }
 }
 
 #post-header {
   background: url(../img/apple.jpg);
-  @include HeaderBackground ();
+  @include PostHeader ();
   height: 500px;
 }
 
 .post-header_sson {
-  padding-top: $golden * 2 + 0em;
+  padding-top: $golden * 3 + 0em;
   padding-right: 0.5 * $golden + 0em;
   padding-bottom: 3 * $golden + 0em;
   padding-left: 0.5 * $golden + 0em;
@@ -165,40 +163,40 @@ img {
 }
 
 .article_sson, .post {
-    @include ArticleColor();
-    padding: $add_padding / 4 + 0em $add_padding + 0em $add_padding / 4 + 0em $add_padding + 0em;
-    margin-bottom: 0.25em;
+  @include ArticleColor();
+  padding: $add_padding / 4 + 0em $add_padding + 0em $add_padding / 4 + 0em $add_padding + 0em;
+  margin-bottom: 0.25em;
 
-        .index-headline {
-          text-align: center;
-          line-height: 1rem;
-          height: 1rem;
-          position: relative;
-          font-weight: 300;
-          margin: 0;
-          padding: 0;
+  .index-headline {
+    text-align: center;
+    line-height: 1rem;
+    height: 1rem;
+    position: relative;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
 
-            span {
-              background-color: #fff;
-              font-size: 1.75188rem;
-              color: $color_02;
-              padding: 0 16px;
-              z-index: 10;
-              position: relative;
-            }
+    span {
+      background-color: #fff;
+      font-size: 1.75188rem;
+      color: $color_02;
+      padding: 0 16px;
+      z-index: 10;
+      position: relative;
+    }
 
-            &:after {
-              position: absolute;
-              content: "";
-              top: 8px;
-              left: 0;
-              right: 0;
-              margin: 0 auto;
-              border-top: 1px solid $color_02;
-              z-index: 0;
-            }
-          }
-        }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      border-top: 1px solid $color_02;
+      z-index: 0;
+    }
+  }
+}
 
 
 .pagination_sson {

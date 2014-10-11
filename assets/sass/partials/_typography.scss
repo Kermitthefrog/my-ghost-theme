@@ -1,20 +1,24 @@
+html, body {
+  height: 100%;
+}
+
 body {
-    margin: 0;
-    font-family: $default_font;
-    line-height: $golden + 0em; //set the regular line height to the golden ratio
-    font-weight: 300;
-    word-wrap:break-word;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: $default_font;
+  line-height: $golden + 0em; //set the regular line height to the golden ratio
+  font-weight: 300;
+  word-wrap:break-word;
+  overflow-x: hidden;
 }
 
 a {
-    background: transparent;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+  background: transparent;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 a:link, a:visited {

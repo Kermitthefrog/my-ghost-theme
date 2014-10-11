@@ -8,6 +8,14 @@
 
 @mixin HeaderBackground () {
   background-repeat: no-repeat !important;
+  background-size: 48% !important;
+  background-position: 100% 100% !important;
+  box-sizing: border-box !important;
+  background-attachment: fixed !important;
+}
+
+@mixin PostHeader () {
+  background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center center !important;
   box-sizing: border-box !important;
