@@ -59,14 +59,4 @@ showQuotes();
 
     citat.toggleClass('hidden');
   });
-
-  preload();
-
-  $('.rollover').on('mouseenter',function() {
-    switchSrc($(this));
-  })
-
-  $('.rollover').on('mouseleave',function() {
-    switchSrc($(this));
-  })
 });
