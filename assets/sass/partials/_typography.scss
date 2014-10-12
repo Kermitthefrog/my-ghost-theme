@@ -31,6 +31,15 @@ a:hover {
     outline: 0;
 }
 
+::selection {
+ background: $color_09;
+ color: $color_06;
+}
+::-moz-selection {
+ background: $color_09;
+ color: $color_06;
+}
+
 // Classic typographic scale: if default 16px total size scale would be:
 // 9px, 10px, 11px, 12px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px
 
