@@ -4,17 +4,17 @@ img {
 }
 
 #header {
-  @include HeaderBackground ();
-  background: url(../img/iam.png);
-  height: 100%;
   width: 100%;
+  height: 100%;
   margin: 0;
+  background: url(../img/iam.png);
+  @include HeaderBackground ();
 }
 
 .cover-black {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.81);
+  background: rgba(0, 0, 0, 0.46);
 }
 
 .wrapper_sson {
@@ -49,9 +49,9 @@ img {
 .primary-navigation {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.64);
-  position: fixed;
+  position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
   z-index: 100;
 
   img {
@@ -99,20 +99,23 @@ img {
   padding: 0 20px;
 
   p {
+    color: $color_08;
+    font-weight: 400;
     margin: 15px 0;
   }
 }
 
 #post-header {
+  position: relative;
+  height: 500px;
   background: url(../img/apple.jpg);
   @include PostHeader ();
-  height: 500px;
 }
 
 .post-header_sson {
-  padding-top: $golden * 3 + 0em;
+  padding-top: $golden * 1 + 0em;
   padding-right: 0.5 * $golden + 0em;
-  padding-bottom: 3 * $golden + 0em;
+  padding-bottom: $golden * 1 + 0em;
   padding-left: 0.5 * $golden + 0em;
   margin-bottom: 0.25em;
   text-align: center;
@@ -212,52 +215,109 @@ img {
 
 .about p {
     text-align: justify;
-  }
-
-.footer_sson {
-  padding: $golden + 0em $golden + 0em;
-}
-
-.footertext_sson {
-  font-size: 0.75188rem;
-  line-height: 1.3em;
-  ul {
-    padding: 0;
-    margin-top: 0;
-    list-style: none;
-  }
-
-  li {
-    display: inline-block;
-  }
 }
 
 .share {
   font-size: 1rem;
-  padding: 2.61792rem 0 6.85353rem;
+  padding: $golden + 0em;
 
-  .left {
-    float: left;
-    width: 38%;
+  .go-back {
+    width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 1rem 0 0;
-    text-align: left;
+    padding: $golden + 0em 0;
+    text-align: center;
 
     a i {
       margin-right: 0.5rem;
     }
   }
 
-  .right {
-    float: right;
-    width: 62%;
+  .sm-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      width: 30%;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .tw {
+      padding: $golden / 3 + 0em;
+      background-color: $twitter-color;
+      @include Transition-A-03 ();
+
+      i {
+        margin-right: 10px;
+      }
+
+      i,a {
+        color: $color_06;
+      }
+
+      &:hover {
+        background-color: $twitter-color-hover;
+      }
+    }
+
+    .fb {
+      padding: $golden / 3 + 0em;
+      background-color: $facebook-color;
+      @include Transition-A-03 ();
+
+      i {
+        margin-right: 10px;
+      }
+
+      i,a {
+        color: $color_06;
+      }
+
+      &:hover {
+        background-color: $facebook-color-hover;
+      }
+    }
+
+    .gl {
+      padding: $golden / 3 + 0em;
+      background-color: $google-color;
+      @include Transition-A-03 ();
+
+      i {
+        margin-right: 10px;
+      }
+
+      i,a {
+        color: $color_06;
+      }
+
+      &:hover {
+        background-color: $google-color-hover;
+      }
+    }
+  }
+
+  .social-media {
+    width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 0 0 1rem;
-    text-align: right;
+
+    .social-icon {
+      width: 33%;
+      min-height: 30px;
+      float: left;
+    }
+
+    .twitter {
+      background-color: #4099FF;
+      text-align: center;
+
+    }
   }
 
   p {
@@ -284,6 +344,25 @@ img {
   .tag-read-more {
     padding: $golden / 6 + 0em;
     text-align: right;
+  }
+}
+
+.footer_sson {
+  padding: $golden + 0em $golden + 0em;
+}
+
+.footertext_sson {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.3em;
+  ul {
+    padding: 0;
+    margin-top: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
   }
 }
 

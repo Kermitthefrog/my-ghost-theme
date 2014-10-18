@@ -24,13 +24,33 @@ $(document).ready(function() {
 
 showQuotes();
 
-    // Load Background Images
+  // Load Background Images
   var images = ['1.jpg', 'tog.jpg', 'apple.jpg', 'hav.jpg'];
   $("#post-header").css({
       'background': 'url(../assets/img/second-header/'
         + images[Math.floor(Math.random() * images.length)] + ')'
   });
 
+
+  var $document = $(document),
+  $element = $('#post-header .primary-navigation'),
+  $element2 = $('#header .primary-navigation'),
+  className = 'hasScrolled';
+  // Fixed Menu > 450 And window.size > 769
+  $document.scroll(function() {
+    if ($document.scrollTop() >= 450 && ($(window).width() > 769)) {
+      $element.css({'position' : 'fixed', 'top' : '0', 'bottom' : 'auto'});
+      // Fixed Menu > 950 And window.size > 769
+      if ($document.scrollTop() >= 920 && ($(window).width() > 769)) {
+        $element2.css({'position' : 'fixed', 'top' : '0', 'bottom' : 'auto'});
+      } else {
+        $element2.css({'position' : 'absolute', 'top' : 'auto', 'bottom' : '0',});
+      }
+    }
+    else {
+      $element.css({'position' : 'absolute', 'top' : 'auto', 'bottom' : '0',});
+    }
+  });
 
  	$(function() {
   $('a[href*=#]:not([href=#])').click(function() {

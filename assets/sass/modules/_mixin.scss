@@ -69,6 +69,14 @@
     border-left: 8px #e5a825 solid;
 }
 
+@mixin Transition-A-03 () {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 @mixin FixedMenu () {
   background-color: rgba(252,252,252,.9);
   border-bottom: 1px solid #f2f2f2;
